@@ -104,6 +104,7 @@ p{margin:0}
 .status{display:inline-flex;align-items:center;gap:8px;color:var(--lime)}
 .status .ic{color:var(--gilt)}
 .fascia-rule .push{margin-left:auto}
+.st-short{display:none}
 
 .hero-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);margin-top:clamp(16px,1.6vw,22px)}
 .panel{background:var(--lime);color:var(--ink);padding:clamp(28px,2.6vw,40px) clamp(24px,3.2vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
@@ -265,7 +266,7 @@ figcaption{color:var(--bs-300);font-size:.92rem;margin-top:14px}
 .contact-lines .ic{color:var(--gilt);margin-top:4px}
 .map{position:relative;min-height:440px;background:var(--bs-850);border-left:3px solid var(--gilt-lo);overflow:hidden}
 .map iframe{position:absolute;left:0;top:-110px;width:100%;height:calc(100% + 110px);border:0;filter:grayscale(1) invert(.92) hue-rotate(180deg) brightness(.92) contrast(.88)}
-.map > a{position:absolute;left:16px;bottom:16px;z-index:2}
+.map > a{position:absolute;left:16px;top:16px;z-index:2}
 
 /* Close */
 .close{margin-top:var(--sec);padding-block:clamp(64px,8vw,120px) clamp(48px,6vw,88px);background:var(--bs-950);position:relative;z-index:1;border-top:1px solid var(--gilt-lo)}
@@ -330,7 +331,9 @@ footer{background:var(--bs-950);position:relative;z-index:1;padding:40px 0 48px;
 }
 @media (min-width:961px) and (max-height:860px){
   .fascia{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:end;gap:0 clamp(24px,3vw,48px)}
-  .fascia-rule{flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:12px;margin:0;padding:0 0 6px clamp(20px,2.4vw,36px);border-top:0;border-left:1px solid var(--gilt-lo);align-self:stretch}
+  .fascia-rule{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;justify-content:space-between;gap:12px;margin:0;padding:8px 0 8px clamp(20px,2.4vw,36px);border-top:0;border-left:1px solid var(--gilt-lo);align-self:stretch;font-size:1rem}
+  .fascia-rule .st-short{display:inline-flex;order:-1;font-family:var(--serif);font-size:clamp(1.25rem,1.6vw,1.5rem);line-height:1.2;color:var(--gilt-hi)}
+  .fascia-rule .st-short .ic{width:.9em;height:.9em}
   .fascia-rule .push{margin-left:0}
   .fascia .wordmark{width:clamp(560px, calc((100svh - 500px) * 3.28), 74vw);min-width:0}
 }
@@ -366,6 +369,7 @@ footer{background:var(--bs-950);position:relative;z-index:1;padding:40px 0 48px;
       <p class="wordmark" id="fascia" role="img" aria-label="PARIZ Hair Co."><span class="wm-pariz"></span><span class="wm-hairco"></span><span class="wm-sheen"></span></p>
       <div class="fascia-rule">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=PARIZ+Hair+Co+1+Doveton+St+N+Ballarat+Central+VIC+3350" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>1 Doveton St N, Ballarat Central</a>
+        <span class="status st-short" data-status><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon 9am-6pm, Tue-Thu 10am-8pm, Fri 9am-6pm, Sat 9am-2pm</span></span>
         <a class="push" href="tel:+61438499439"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>0438 499 439</a>
       </div>
     </div>
